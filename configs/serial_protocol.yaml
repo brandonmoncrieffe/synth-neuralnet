@@ -1,0 +1,31 @@
+protocol_name: synthmatch_serial_placeholder
+protocol_version: placeholder_v0
+transport: uart
+payload_audio_format: raw_pcm_binary
+byte_order: little_endian
+checksum:
+  enabled: false
+  algorithm: TODO
+commands:
+  HELLO:
+    direction: pc_to_esp32
+    description: Verify that the ESP32-S3 synth firmware is responding.
+  SET_PARAMS:
+    direction: pc_to_esp32
+    description: Send one complete parameter set.
+  RENDER:
+    direction: pc_to_esp32
+    description: Ask the ESP32-S3 to render a fixed-duration buffer.
+  AUDIO_CHUNK:
+    direction: esp32_to_pc
+    description: Return raw PCM bytes in chunks.
+  DONE:
+    direction: esp32_to_pc
+    description: Signal render completion.
+  ERROR:
+    direction: esp32_to_pc
+    description: Report a firmware or protocol failure.
+notes:
+  - Firmware-specific framing, payload encoding, and checksum behavior are TODO.
+  - Audio must be transferred as raw PCM binary, never JSON or comma-separated text.
+

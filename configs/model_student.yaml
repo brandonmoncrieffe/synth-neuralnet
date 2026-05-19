@@ -1,0 +1,10 @@
+model_name: student_cnn_placeholder
+input:
+  feature_type: log_mel_spectrogram
+  sample_rate: 22050
+  channels: 1
+output:
+  target: fixed_synth_parameter_vector
+notes:
+  - Placeholder only. Do not treat this as a final model architecture.
+

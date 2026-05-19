@@ -1,0 +1,86 @@
+# Placeholder schema. Replace every parameter below with the fixed ESP32-S3
+# synth parameter set before generating a real dataset.
+schema_version: placeholder_v0
+target_vector:
+  include_only_marked: true
+parameters:
+  - name: osc_waveform
+    type: categorical
+    allowed_values: [sine, saw, square, triangle]
+    default: sine
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: osc_mix
+    type: float
+    min: 0.0
+    max: 1.0
+    default: 0.5
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: filter_cutoff
+    type: float
+    min: 20.0
+    max: 12000.0
+    default: 1000.0
+    sampling_strategy: log_uniform_todo
+    include_in_target: true
+    placeholder: true
+  - name: filter_resonance
+    type: float
+    min: 0.0
+    max: 1.0
+    default: 0.1
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: amp_attack
+    type: float
+    min: 0.0
+    max: 2.0
+    default: 0.01
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: amp_decay
+    type: float
+    min: 0.0
+    max: 2.0
+    default: 0.2
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: amp_sustain
+    type: float
+    min: 0.0
+    max: 1.0
+    default: 0.8
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: amp_release
+    type: float
+    min: 0.0
+    max: 4.0
+    default: 0.5
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: lfo_rate
+    type: float
+    min: 0.0
+    max: 20.0
+    default: 2.0
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+  - name: lfo_depth
+    type: float
+    min: 0.0
+    max: 1.0
+    default: 0.0
+    sampling_strategy: uniform
+    include_in_target: true
+    placeholder: true
+

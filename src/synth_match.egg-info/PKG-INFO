@@ -1,3 +1,24 @@
+Metadata-Version: 2.4
+Name: synth-match
+Version: 0.1.0
+Summary: Inverse-synthesis dataset generation and ML skeleton for an ESP32-S3 synthesizer.
+Author: Brandon Moncrieffe
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: soundfile
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+Requires-Dist: pyserial
+Requires-Dist: onnx
+Requires-Dist: onnxruntime
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
 # synth-match
 
 `synth-match` is a Python/PyTorch repository skeleton for inverse synthesis: given a target sound, learn to predict the fixed parameter set for an ESP32-S3 synthesizer so the hardware synth can reproduce the target as closely as possible.

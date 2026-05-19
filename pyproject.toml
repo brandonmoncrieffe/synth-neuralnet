@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synth-match"
+version = "0.1.0"
+description = "Inverse-synthesis dataset generation and ML skeleton for an ESP32-S3 synthesizer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Brandon Moncrieffe" }
+]
+dependencies = [
+  "torch",
+  "torchaudio",
+  "numpy",
+  "scipy",
+  "soundfile",
+  "pyyaml",
+  "tqdm",
+  "pyserial",
+  "onnx",
+  "onnxruntime",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

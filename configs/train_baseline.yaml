@@ -1,0 +1,9 @@
+experiment_name: baseline_placeholder
+dataset_manifest: data/raw/clean_mixed_10k/manifest.jsonl
+batch_size: 32
+num_workers: 4
+max_epochs: 1
+learning_rate: 0.0003
+notes:
+  - Skeleton config only. Real training code is intentionally not implemented yet.
+

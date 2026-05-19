@@ -1,0 +1,8 @@
+model_name: teacher_model_placeholder
+input:
+  feature_type: waveform_or_learned_audio_encoder
+output:
+  target: candidate_parameter_predictions
+notes:
+  - Future support for pretrained audio encoders, candidate ranking, and distillation.
+

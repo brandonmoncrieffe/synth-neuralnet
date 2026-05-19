@@ -1,0 +1,35 @@
+dataset_name: clean_mixed_50k
+num_examples: 50000
+sample_rate: 22050
+channels: 1
+audio_format: pcm16
+output_dir: data/raw/clean_mixed_50k
+train_split: 0.8
+val_split: 0.1
+test_split: 0.1
+seed: 1234
+synth_version: esp32_s3_v0
+
+duration_buckets:
+  - duration_seconds: 1.0
+    proportion: 0.60
+  - duration_seconds: 2.0
+    proportion: 0.30
+  - duration_seconds: 4.0
+    proportion: 0.10
+
+serial:
+  port: null
+  baud_rate: 921600
+  timeout_seconds: 5.0
+  chunk_size_bytes: 4096
+
+resume:
+  enabled: true
+  verify_existing_files: true
+  regenerate_corrupt_examples: true
+
+dry_run:
+  enabled: true
+  max_examples: 10
+

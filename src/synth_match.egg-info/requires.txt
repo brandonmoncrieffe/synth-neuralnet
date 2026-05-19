@@ -1,0 +1,13 @@
+torch
+torchaudio
+numpy
+scipy
+soundfile
+pyyaml
+tqdm
+pyserial
+onnx
+onnxruntime
+
+[dev]
+pytest
